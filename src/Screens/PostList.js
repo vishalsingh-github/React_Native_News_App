@@ -72,25 +72,23 @@ const PostList = ({ navigation }) => {
                     });
                   }}
                 >
-                  <View>
-                    <Text style={styles.title}>{post.node.title}</Text>
+                  <View style={{ borderWidth: 2, borderLeftColor: "black", marginBottom: 4, borderRadius: 5,}}>
                     <Image
                       source={{ uri: post.node.featuredImage.node.sourceUrl }}
-                      resizeMode="center"
+                      resizeMode="stretch"
                       style={{
                         width: "100%",
                         height: 200,
-                        borderRadius: 5,
-                        marginBottom: 5,
+                        borderRadius: 4,
+                        marginTop: 0,
                       }}
                     />
+                    <Text style={styles.title}>{post.node.title}</Text>
 
                     <Text
                       style={{
                         color: "red",
                         marginBottom: 5,
-                        borderBottomColor: "black",
-                        borderBottomWidth: 2,
                       }}
                     >
                       Learn More
@@ -113,13 +111,13 @@ export default PostList;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
+    padding: 10,
   },
   title: {
     flex: 1,
     fontSize: 15,
     fontWeight: "bold",
     //   marginBottom: 10,
-    marginTop: 5,
+    marginTop: 0,
   },
 });

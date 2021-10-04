@@ -31,7 +31,22 @@ const Post = ({ route, navigation }) => {
         <HTML
           source={{ html: content }}
           contentWidth={contentWidth}
-          style={styles.newspost}
+          tagsStyles={{
+            a: { color: "red" },
+            h3: {
+              color: "blue",
+              margin: 0,
+              padding: 0,
+            },
+            img: {
+              width: "100%",
+              maxHeight: "180px",
+              objectFit: "scale-down",
+            },
+            p: {
+              marginBottom: 0,
+            },
+          }}
         />
         <TouchableWithoutFeedback
           onPress={() => {
